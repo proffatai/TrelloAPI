@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "693da870-9548-47be-b0fa-7ef8509e2684",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all members board",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Trello_prod}}/1/members/aslon1/boards?key={{MyKey}}&token={{MyToken}}&fields={{MyFields}}",
+					"host": [
+						"{{Trello_prod}}"
+					],
+					"path": [
+						"1",
+						"members",
+						"aslon1",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{MyKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{MyToken}}"
+						},
+						{
+							"key": "fields",
+							"value": "{{MyFields}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific board",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/620a0aad58b8b74ea7b911cf?key=20f0f41735ad2108e38782ae4babbfaa&token=6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"620a0aad58b8b74ea7b911cf"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the different lists available",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/620a0aad58b8b74ea7b911cf/lists?key=20f0f41735ad2108e38782ae4babbfaa&token=6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"620a0aad58b8b74ea7b911cf",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a particular list from all the list available",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists/62093572610290619dd3e6d1/cards?key=20f0f41735ad2108e38782ae4babbfaa&token={{MyToken}}&fields={{MyFields}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists",
+						"62093572610290619dd3e6d1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "{{MyToken}}"
+						},
+						{
+							"key": "fields",
+							"value": "{{MyFields}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific card in a particular list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/620a1d751eaaf375393e1fc1?key=20f0f41735ad2108e38782ae4babbfaa&token=6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e&fields=id,name,pos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"620a1d751eaaf375393e1fc1"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e"
+						},
+						{
+							"key": "fields",
+							"value": "id,name,pos"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name=Ibrahim&key=20f0f41735ad2108e38782ae4babbfaa&token=6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ibrahim"
+						},
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a board: Method 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"name\":\"Abiodun\",\r\n\"sex\":\"Female\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/boards?key=20f0f41735ad2108e38782ae4babbfaa&token=6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new card into To do of Abiodun board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=620a0aad58b8b74ea7b911d2&key=20f0f41735ad2108e38782ae4babbfaa&token=6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e&name=Adesanmi is a man",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "620a0aad58b8b74ea7b911d2"
+						},
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e"
+						},
+						{
+							"key": "name",
+							"value": "Adesanmi is a man"
+						},
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new card into Done of Abiodun board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"name\": \"This is done for now\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=620a0aad58b8b74ea7b911d2&key=20f0f41735ad2108e38782ae4babbfaa&token=6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "620a0aad58b8b74ea7b911d2"
+						},
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a board",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/620a16ec7dc3304fb692de88?name=Fatai&key=20f0f41735ad2108e38782ae4babbfaa&token=6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"620a16ec7dc3304fb692de88"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Fatai"
+						},
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a card",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/620a1d751eaaf375393e1fc1?name=Fatai is a man&key=20f0f41735ad2108e38782ae4babbfaa&token=6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"620a1d751eaaf375393e1fc1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Fatai is a man"
+						},
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a board",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/620a0aad58b8b74ea7b911cf?key=20f0f41735ad2108e38782ae4babbfaa&token=6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"620a0aad58b8b74ea7b911cf"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "key",
+							"value": "20f0f41735ad2108e38782ae4babbfaa"
+						},
+						{
+							"key": "token",
+							"value": "6e8d25b21a5f3152755656f4489d163e2bd993a432bff6f1a2f341326fd9666e"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "MyKey",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "MyToken",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "MyFields",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
